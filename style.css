@@ -1,11 +1,32 @@
+body{
+    background-color: rgb(100, 100, 100);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
 input {
     border: none;
+}
+.timeDP-options {
+    text-align: center;
+}
+.timeDP-options:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+.inputCont {
+    border: 1px solid black;
+    width: 108px;
+    background-color: white;
 }
 .timeDPDisplay {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 111px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -14,11 +35,36 @@ input {
     display: flex;
     flex-direction: column;
     width: 35px;
+    height: 50px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+}
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .timeDP-col::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.timeDP-col {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+} 
+
+.clockIcon{
+    border: none;
+    background-color: white;
+}
+.clockIcon:hover {
+    background-color: lightgray;
+    cursor: pointer;
 }
 .timepdd {
-    width: 20px ; 
+    width: 17px ; 
+    text-align: center;
 }
 .d-flex {
     display: flex;
+    justify-content: space-around;
 }
 .show {display: block;}

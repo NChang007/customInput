@@ -1,5 +1,6 @@
 function openDropdown() {
     document.querySelector("#timeDP").classList.toggle("show");
+    // handleTimeUpdate()
 }
 
 let myArr = [
@@ -30,16 +31,29 @@ let myArr = [
 //     // avatarImgList.push(item)
 //     dropdown.innerHTML += item
 // }
+let timeOutput = {} // 1:30 PM
+const handleTimeUpdate = () => {
+    let hour =document.querySelector('#hourInput').value
+    let min = document.querySelector('#minInput').value
+    let dn = document.querySelector('#dayNightInput')
+
+    timeOutput = hour + ':' + min + ' ' + dn
+    console.log(timeOutput);
+}
 
 const handlePicker = (inputType, value) => {
     if (inputType == 'hour'){
         let input = document.querySelector('#hourInput')
         input.value= value
+        handleTimeUpdate()
     }else if(inputType == 'min'){
         let input = document.querySelector('#minInput')
         input.value = value
+        handleTimeUpdate()
     }else if (inputType == "dayNight"){
         let input = document.querySelector('#dayNightInput')
         input.value = value
+        handleTimeUpdate()
     }
+
 }

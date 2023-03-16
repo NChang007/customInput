@@ -4,68 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Input testing</title>
 </head>
 <body>
-    <div class="originalInputs">
-        <input type="time"/>
+    <div class="inputCont">
+        <input id="hourInput" class="timepdd" type="text" value="--" maxlength="2">
+        <span><strong>:</strong></span>
+        <input id="minInput" class="timepdd" type="text" value="--" maxlength="2">
+        <input id="dayNightInput" class="timepdd" type="text" value="--" maxlength="2">
+        <button class="clockIcon" onclick="openDropdown()"><i class="fa fa-clock-o"></i></button>
     </div>
-    <div class="inputTest">
-        <!-- <input type="number">
-        <input type="number"> -->
-        <!-- <select name="hour" id="htime">
-            <option value="--">--</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="2">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <span>:</span>
-        <select name="minuts" id="mtime">
-            <option value="--">--</option>
-            <option value="00">00</option>
-            <option value="15">15</option>
-            <option value="30">30</option>
-            <option value="45">45</option>
-        </select>
-        <select name="dayNight" id="mtime">
-            <option value="--">--</option>
-            <option value="AM">AM</option>
-            <option value="PM">PM</option>
-        </select> -->
-        <input id="hourInput" class="timepdd" type="text" value="--">
-        <span>:</span>
-        <input id="minInput" class="timepdd" type="text" value="--">
-        <input id="dayNightInput" class="timepdd" type="text" value="--">
-        <button onclick="openDropdown()">logoHere</button>
-        <div id="timeDP" class="timeDPDisplay">
-            <div class="d-flex">
-                <div class="timeDP-col timeDP-H">
-                    <span id="h-1" onclick="handlePicker('hour', 1)" >1</span>
-                    <span id="h-2" onclick="handlePicker('hour', 2)" >2</span>
-                    <span id="h-3" onclick="handlePicker('hour', 3)" >3</span>
-                </div>
-                <div class="timeDP-col timeDP-M">
-                    <span id="m-00" onclick="handlePicker('min', 00)" >00</span>
-                    <span id="m-15" onclick="handlePicker('min', 15)" >15</span>
-                    <span id="m-30" onclick="handlePicker('min', 30)" >30</span>
-                </div>
-                <div class="timeDP-col daynight">
-                    <span id="dayNight-am" onclick="handlePicker('dayNight', 'AM')" >AM</span>
-                    <span id="dayNight-pm" onclick="handlePicker('dayNight', 'PM')" >PM</span>
-                </div>
+    <div id="timeDP" class="timeDPDisplay">
+        <div class="d-flex">
+            <div class="timeDP-col timeDP-H">
+                <span id="h-1" class="timeDP-options" onclick="handlePicker('hour', '1')" >1</span>
+                <span id="h-2" class="timeDP-options" onclick="handlePicker('hour', '2')" >2</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '3')" >3</span>
+                <span id="h-1" class="timeDP-options" onclick="handlePicker('hour', '4')" >4</span>
+                <span id="h-2" class="timeDP-options" onclick="handlePicker('hour', '5')" >5</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '6')" >6</span>
+                <span id="h-1" class="timeDP-options" onclick="handlePicker('hour', '7')" >7</span>
+                <span id="h-2" class="timeDP-options" onclick="handlePicker('hour', '8')" >8</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '9')" >9</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '10')" >10</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '11')" >11</span>
+                <span id="h-3" class="timeDP-options" onclick="handlePicker('hour', '12')" >12</span>
+            </div>
+            <div class="timeDP-col timeDP-M">
+                <span id="m-00" class="timeDP-options" onclick="handlePicker('min', '00')" >00</span>
+                <span id="m-15" class="timeDP-options" onclick="handlePicker('min', '15')" >15</span>
+                <span id="m-30" class="timeDP-options" onclick="handlePicker('min', '30')" >30</span>
+                <span id="m-30" class="timeDP-options" onclick="handlePicker('min', '45')" >30</span>
+            </div>
+            <div class="timeDP-col daynight">
+                <span id="dayNight-am" class="timeDP-options" onclick="handlePicker('dayNight', 'AM')" >AM</span>
+                <span id="dayNight-pm" class="timeDP-options" onclick="handlePicker('dayNight', 'PM')" >PM</span>
             </div>
         </div>
     </div>
+
 
 <script src="app.js"></script>
 </body>
